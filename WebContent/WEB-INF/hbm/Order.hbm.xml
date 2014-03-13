@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.demo.model">
+	<class name="Order" table="mms_order">
+		<id name="id" type="java.lang.Integer" column="id">
+			<generator class="identity" />
+		</id>
+		<property name="oder_name" column="oder_name" type="string"
+			not-null="true" length="20" />
+		<property name="mobile" column="mobile" type="string"
+			not-null="true" length="11" />
+		<property name="uid" column="uid" type="string" not-null="true"
+			length="11" />
+		<property name="schjobtype" column="schjobtype" type="string"
+			length="20" />
+		<property name="schindustry" column="schindustry" type="string"
+			length="50" />
+		<property name="schcityadv" column="schcityadv" type="string"
+			length="30" />
+		<property name="publishdate" column="publishdate" type="string"
+			length="3" />
+		<property name="resume_id" column="resume_id" type="string"
+			length="30" />
+		<property name="version_number" column="version_number" type="java.lang.Short"
+			length="2" />
+		<property name="webordernum" column="webordernum" type="java.lang.Short"
+			length="1" />
+		<property name="last_short_id" column="last_short_id" type="java.lang.Integer"
+			length="11" />
+		<property name="status" column="status" type="java.lang.Short"
+			length="4" />
+		<property name="sdate" column="sdate" type="java.util.Date" />
+		<property name="istotom" column="istotom" type="string"
+			length="10" />
+		<property name="end_date" column="end_date" type="java.util.Date" />
+		<property name="pay_type" column="pay_type" type="java.lang.Short"
+			length="1" />
+	</class>
+</hibernate-mapping>
