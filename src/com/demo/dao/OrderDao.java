@@ -39,7 +39,7 @@ public class OrderDao {
 		try {
 			orders = session.createSQLQuery("select * from mms_order where ?")
 					.addEntity(Order.class).setString(0, condition)
-					.setMaxResults(200)
+					.setMaxResults(pageSize)
 					.setFirstResult(pageSize * (pageNum - 1)).list();
 		} catch (RuntimeException e) {
 			throw e;

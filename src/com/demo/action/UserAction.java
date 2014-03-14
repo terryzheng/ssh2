@@ -23,6 +23,10 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 		return "input";
 	}
 
+	public String index() {
+		return "ok";
+	}
+
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}

@@ -348,10 +348,10 @@ var App = function () {
                         }
                         $('.sidebar-search').addClass("open");
                     } else {
-                        window.location.href = "extra_search.html";
+                        window.location.href = "/search.jsp";
                     }
                 } else {
-                    window.location.href = "extra_search.html";
+                    window.location.href = "/search.jsp";
                 }
         });
     }
@@ -659,7 +659,7 @@ var App = function () {
 
         // handle theme colors
         var setColor = function (color) {
-            $('#style_color').attr("href", "assets/css/themes/" + color + ".css");
+            $('#style_color').attr("href", "/metronic.bootstrap/css/themes/" + color + ".css");
             $.cookie('style_color', color);                
         }
 

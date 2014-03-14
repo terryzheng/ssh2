@@ -60,6 +60,9 @@ var TableEditable = function() {
 
 			var oTable = $('#order_table').dataTable(
 					{
+						"bPaginate" : false,
+						"bInfo" : false,
+						"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t",
 						"aLengthMenu" : [ [ 20, 50, 100, -1 ],
 								[ 20, 50, 100, "All" ] ],
 						"iDisplayLength" : 20,
