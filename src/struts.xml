@@ -18,7 +18,8 @@
 
 	<package name="user" namespace="/users" extends="main">
 		<action name="*" class="UserAction" method="{1}">
-			<result name="ok">/WEB-INF/jsp/index.jsp</result>
+		    <result name="index">/WEB-INF/jsp/index.jsp</result>
+			<result name="ok" type="redirect">index.do</result>
 			<result name="input">/login.jsp</result>
 		</action>
 	</package>
