@@ -97,7 +97,7 @@
 				<li class="dropdown user"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown"> <img alt=""
 						src="/metronic.bootstrap/image/avatar1_small.jpg" /> <span
-						class="username"><s:property value="#session.user.name" />
+						class="username">${session.user.name}
 					</span> <i class="icon-angle-down"></i> </a>
 					<ul class="dropdown-menu">
 						<li><a href="extra_profile.html"><i class="icon-user"></i>

@@ -2,15 +2,12 @@ package com.demo.action;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.struts2.ServletActionContext;
-
 import com.demo.model.Order;
 import com.demo.service.OrderService;
-import com.opensymphony.xwork2.ActionSupport;
 
 @SuppressWarnings("serial")
-public class OrderAction extends ActionSupport {
+public class OrderAction extends BaseAction {
 	private OrderService orderService;
 	private List<Order> orderlist = new ArrayList<Order>();
 	private Order order;

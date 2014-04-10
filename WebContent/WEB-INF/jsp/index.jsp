@@ -1,5 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="com.demo.util.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -40,10 +41,7 @@
 		<!-- BEGIN PAGE -->
 		<div class="page-content">
 			<!-- BEGIN PAGE CONTAINER-->
-			<div class="container-fluid">
-				用户姓名为：
-				<s:property value="#session.user.name" />
-			</div>
+			<div class="container-fluid">用户姓名为： ${session.user.name}</div>
 			<!-- END PAGE CONTAINER-->
 		</div>
 		<!-- END PAGE -->

@@ -1,25 +1,20 @@
 package com.demo.action;
 
-import java.util.Map;
-
-import org.apache.struts2.interceptor.SessionAware;
-
 import com.demo.model.User;
 import com.demo.service.UserService;
-import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ModelDriven;
 
 @SuppressWarnings("serial")
-public class UserAction extends ActionSupport implements ModelDriven<User>,
-		SessionAware {
+public class UserAction extends BaseAction implements ModelDriven<User> {
 	private User user = new User();
 	private UserService userService;
-	private Map<String, User> session;
 
 	public User getModel() {
 		return user;
 	}
 
+	@SuppressWarnings("unchecked")
 	public String login() {
 		if (user.getName() == null || user.getPassword() == null) {
 			return "error";
@@ -40,10 +35,5 @@ public class UserAction extends ActionSupport implements ModelDriven<User>,
 
 	public UserService getUserService() {
 		return userService;
-	}
-
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public void setSession(Map session) {
-		this.session = session;
 	}
 }
